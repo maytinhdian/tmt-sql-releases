@@ -1,6 +1,8 @@
-# MitaproSql Tool — Releases
+# TMT SQL Tool — Releases
 
-Đây là repository công khai dùng để phân phối các bản phát hành chính thức của **MitaproSql Tool**.
+**TMT SQL Tool** là công cụ tích hợp dành cho phần mềm **MitaPro V1** và **TicoH+**, hỗ trợ kết nối và tải log chấm công từ các máy chấm công sử dụng firmware mới.
+
+Công cụ chủ động kết nối máy chấm công bằng ZKTeco Standalone SDK, cho phép người dùng xem trước dữ liệu và xác nhận trước khi cập nhật vào cơ sở dữ liệu của phần mềm.
 
 ## Tải xuống
 
