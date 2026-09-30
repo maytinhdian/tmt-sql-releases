@@ -8,22 +8,29 @@ Công cụ chủ động kết nối máy chấm công bằng ZKTeco Standalone 
 
 Mở trang [Releases](../../releases/latest) để tải phiên bản mới nhất.
 
-Mỗi bản phát hành dự kiến gồm:
+Mỗi bản phát hành gồm:
 
-- Bộ cài Windows x86 (`.exe`)
-- Gói portable (`.zip`) nếu có
-- `latest.json` dành cho chức năng kiểm tra cập nhật
-- `SHA256SUMS.txt` để xác minh tính toàn vẹn
+- `TmtSqlTool-<version>-Setup.exe`: bộ cài Windows x86 (khuyến nghị)
+- `TmtSqlTool-<version>-win-x86.zip`: bản portable, nếu có
+- `SHA256SUMS.txt`: mã SHA-256 để xác minh tính toàn vẹn
+
+Chức năng kiểm tra cập nhật trong phần mềm đọc phiên bản mới nhất trực tiếp từ trang Releases này.
 
 ## Xác minh SHA-256
 
-Sau khi tải xuống, mở PowerShell tại thư mục chứa file và chạy:
+Sau khi tải xuống, mở PowerShell tại thư mục chứa file và chạy (thay `<version>` bằng số phiên bản, ví dụ `1.0.5`):
 
 ```powershell
-Get-FileHash .\TmtSqlTool-Setup-<version>.exe -Algorithm SHA256
+Get-FileHash .\TmtSqlTool-<version>-Setup.exe -Algorithm SHA256
 ```
 
-Đối chiếu kết quả với `SHA256SUMS.txt` trong cùng bản phát hành.
+Với bản portable:
+
+```powershell
+Get-FileHash .\TmtSqlTool-<version>-win-x86.zip -Algorithm SHA256
+```
+
+Đối chiếu giá trị `Hash` với dòng tương ứng trong `SHA256SUMS.txt` của cùng bản phát hành (không phân biệt chữ hoa, chữ thường).
 
 ## Cảnh báo Windows SmartScreen
 
